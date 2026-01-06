@@ -1,0 +1,77 @@
+site_name: BeertjeNL - Wet en Regelgeving
+site_url: https://github.com/BeertjeNL/hengelorp-apv.git
+site_description: Wet en regelgeving van BeertjeNL
+site_author: BeertjeNL
+
+copyright: Copyright © 2025-2026 BeertjeNL
+
+repo_url: https://github.com/BeertjeNL/hengelorp-apv.git
+repo_name: HengeloRP/APVPreview
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: nl
+  favicon: img/logogoogle.webp
+  logo: img/logogoogle.png
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Naar donkere modus
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Naar lichte modus
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - header.autohide
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+
+extra:
+  analytics:
+    provider: google
+    property: UA-167800475-3
+
+plugins:
+  - search:
+      lang: nl
+  - git-revision-date-localized:
+      type: timeago
+      time_zone: Europe/Amsterdam
+      locale: nl
+      fallback_to_build_date: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - tables
+
+extra_javascript:
+  - https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.2.1/tablesort.min.js
+  - javascripts/tables.js
+
+nav:
+  - Home: index.md
+  - Algemene Plaatselijke Verordening: apv.md
+  - Wetboek: wetboek.md
+  - Risicogebieden: risico-gebieden.md
+  - Douanegebieden: douanegebieden.md
+  - NOTAM: notam.md
+  - Streamen op Pino: streamen.md
+  - Kosten:
+      - Advocatuur: kosten/advocatuur.md
+      - Ambulance: kosten/ambulance.md
+      - ANWB: kosten/anwb.md
+      - Politie: kosten/politie.md
+      - Vliegschool: kosten/vliegschool.md
